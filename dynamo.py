@@ -1,3 +1,4 @@
+import timeit
 def min_coins_dyn(target):
     for i in range(1, target + 1):
         res.append(float('inf'))
@@ -23,6 +24,12 @@ def backtrack(res, t):
 coins = [1, 2, 5, 10, 20, 50, 100, 200]
 target = 1234
 res = [0]
-print(min_coins_dyn(target))
-# print(minCoins(coins, sum))
+def time_():
+    t1 = timeit.default_timer()
+    print(min_coins_dyn(target))
+    t2 = timeit.default_timer()
+    print(t2-t1)
+
+time_()
+
 'Були використані монети: 0.01€, 0.02€, 0.05€, 0.10€, 0.20€, 0.50€, 1.00€, 2.00€'
