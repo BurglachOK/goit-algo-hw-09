@@ -1,5 +1,6 @@
 import timeit
 def min_coins_dyn(target):
+    res = [0]
     for i in range(1, target + 1):
         res.append(float('inf'))
         for j in range(len(coins)):
@@ -23,7 +24,6 @@ def backtrack(res, t):
 
 coins = [1, 2, 5, 10, 20, 50, 100, 200]
 target = 1234
-res = [0]
 def time_():
     t1 = timeit.default_timer()
     print(min_coins_dyn(target))

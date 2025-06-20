@@ -8,7 +8,7 @@ def find_coins_greedy(coins, target):
         while i <= target:
             target -= i
             quantity += 1
-            result[i] = quantity
+            result[i] = result.get(i, 0) + 1
         quantity = 0
     return result
 
